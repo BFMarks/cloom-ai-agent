@@ -201,4 +201,4 @@ AI Agent (OpenAI + Deepgram + Cartesia)
 - **18.116.27.160**: LiveKit + AI Agent
 - **3.21.228.204**: Asterisk PBX
 
-**Test Extension:** 1001 @ 3.21.228.204
+**Test Extension:** 1001 @ 3.21.228.204git commit -m "Add streamlined README"
