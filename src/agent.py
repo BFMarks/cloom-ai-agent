@@ -110,7 +110,7 @@ async def my_agent(ctx: JobContext):
     }
 
     # Set up a voice AI pipeline using OpenAI, Cartesia, AssemblyAI, and the LiveKit turn detector
-    session = AgentSession(
+    session = AgentSessiovoice(
         # Speech-to-text (STT) is your agent's ears, turning the user's speech into text that the LLM can understand
         # See all available models at https://docs.livekit.io/agents/models/stt/
         stt=deepgram.STT(),
@@ -119,7 +119,7 @@ async def my_agent(ctx: JobContext):
         llm=openai.LLM(model="gpt-4o-mini"),
         # Text-to-speech (TTS) is your agent's voice, turning the LLM's text into speech that the user can hear
         # See all available models as well as voice selections at https://docs.livekit.io/agents/models/tts/
-        tts = cartesia.TTS(),
+        tts = cartesia.TTS(voice="15d0c2e2-8d29-44c3-be23-d585d5f154a1"),
         # VAD and turn detection are used to determine when the user is speaking and when the agent should respond
         # See more at https://docs.livekit.io/agents/build/turns
         turn_detection=MultilingualModel(),
